@@ -374,34 +374,16 @@
     
     <script>
         $(document).ready(function () {
-            // Function to validate email
-            function validateEmail(email) {
-                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-                return emailPattern.test(email);
-            }
-
             // Handle form submission using JavaScript
             document.getElementById("contactForm").addEventListener("submit", function (e) {
                 e.preventDefault(); // Prevent the default form submission behavior
 
-                const name = document.getElementById("name").value;
-                const email = document.getElementById("email").value;
-                const selectedService = document.getElementById("service").value;
-                const message = document.getElementById("message").value;
-
-                // Validate the email field
-                if (!validateEmail(email)) {
-                    document.getElementById("email-error").textContent = "Invalid email address";
-                    return;
-                } else {
-                    document.getElementById("email-error").textContent = ""; // Clear the error message
-                }
-
-                // Your code to send the form data to the server goes here
+                // Here, you can add form data validation if needed
 
                 // Simulate a successful submission after a delay
                 setTimeout(function () {
-                    // Show the success modal or any other desired action
+                    // Show the success modal
+                    $('#successModal').modal('show');
 
                     // Clear the form fields if needed
                     document.getElementById("name").value = "";
@@ -411,15 +393,9 @@
                 }, 2000); // Simulated delay of 2 seconds
             });
 
-            // Enable or disable the submit button based on the email field
-            document.getElementById("email").addEventListener("input", function () {
-                const email = document.getElementById("email").value;
-                const submitButton = document.getElementById("submitButton");
-                if (validateEmail(email)) {
-                    submitButton.removeAttribute("disabled");
-                } else {
-                    submitButton.setAttribute("disabled", "true");
-                }
+            // Attach an event listener to the close button inside the modal
+            document.getElementById("successModal").addEventListener("hidden.bs.modal", function () {
+                // Do something when the modal is closed (if needed)
             });
         });
     </script>
