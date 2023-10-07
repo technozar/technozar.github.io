@@ -136,11 +136,13 @@
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
                 <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex align-items-center justify-content-center">
                     <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <input type="text" class="form-control bg-transparent border-primary p-3"
+                            placeholder="Type search keyword">
                         <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
                     </div>
                 </div>
@@ -153,8 +155,7 @@
     <!-- Contact Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto"
-                style="max-width: 600px;">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h3 class="fw-bold text-primary text-uppercase">Contact Us</h3>
                 <h2 class="mb-0">If You Have Any Query, Feel Free To Contact Us</h2>
             </div>
@@ -198,27 +199,30 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-                    <form>
+                    <form id="contactForm">
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <input type="text" class="form-control border-0 bg-light px-4"
-                                    placeholder="Your Name" style="height: 55px;">
+                                <input type="text" class="form-control border-0 bg-light px-4" placeholder="Your Name"
+                                    style="height: 55px;" id="nameInput" required>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" class="form-control border-0 bg-light px-4"
-                                    placeholder="Your Email" style="height: 55px;">
+                                <input type="email" class="form-control border-0 bg-light px-4" placeholder="Your Email"
+                                    style="height: 55px;" id="emailInput" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" class="form-control border-0 bg-light px-4"
+                                    placeholder="Your Phone Number" style="height: 55px;" id="phoneInput" required>
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control border-0 bg-light px-4"
-                                    placeholder="Subject" style="height: 55px;">
+                                <input type="text" class="form-control border-0 bg-light px-4" placeholder="Subject"
+                                    style="height: 55px;" id="subjectInput" required>
                             </div>
                             <div class="col-12">
                                 <textarea class="form-control border-0 bg-light px-4 py-3" rows="4"
-                                    placeholder="Message"></textarea>
+                                    placeholder="Message" id="messageInput" required></textarea>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send
-                                    Message</button>
+                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -226,14 +230,18 @@
                 <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
                     <iframe class="position-relative rounded w-100 h-100"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="min-height: 350px; border:0;" allowfullscreen=""
-                        aria-hidden="false" tabindex="0"></iframe>
+                        frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
                 </div>
             </div>
         </div>
     </div>
     <!-- Contact End -->
 
+    <!-- The fixed position popup message element -->
+    <div id="popupMessage"
+        style="position: fixed; top: 0; left: 0; width: 100%; background-color: #007bff; color: #fff; text-align: center; padding: 10px; display: none;">
+        Message sent successfully!</div>
 
 
     <!-- Footer Start -->
@@ -270,8 +278,7 @@
                                 <p class="mb-0">+91 9216607764</p>
                             </div>
                             <div class="d-flex mt-4">
-                                <a class="btn btn-primary btn-square me-2"
-                                    href="https://twitter.com/technozar"><i
+                                <a class="btn btn-primary btn-square me-2" href="https://twitter.com/technozar"><i
                                         class="fab fa-twitter fw-normal"></i></a>
                                 <a class="btn btn-primary btn-square me-2"
                                     href="https://www.facebook.com/profile.php?id=100089896600647"><i
@@ -298,8 +305,8 @@
                                         class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
                                 <a class="text-light mb-2" href="#"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Portfolio</a>
-                                <a class="text-light" href="#"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
+                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest
+                                    Blog</a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
@@ -343,8 +350,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -361,6 +367,57 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const nameInput = document.getElementById('nameInput');
+        const emailInput = document.getElementById('emailInput');
+        const phoneInput = document.getElementById('phoneInput');
+        const subjectInput = document.getElementById('subjectInput');
+        const messageInput = document.getElementById('messageInput');
+    
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+    
+            const name = nameInput.value;
+            const email = emailInput.value;
+            const phone = phoneInput.value;
+            const subject = subjectInput.value;
+            const message = messageInput.value;
+    
+            if (!name || !email || !phone || !subject || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+    
+            fetch('https://formspree.io/f/xeqbpwed', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    phone,
+                    subject,
+                    message,
+                }),
+            })
+            .then(response => {
+                if (response.ok) {
+                    form.reset();
+                    alert('Message sent successfully!');
+                } else {
+                    alert('Failed to send message. Please try again later.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            });
+        });
+    </script>
+
 </body>
 
 </html>
